@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>XLAW Store — Faizan Ali</title>
+
+<!-- FAVICON (The Tab Logo) -->
+<link rel="icon" type="image/png" href="logo.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -96,11 +100,13 @@
     position: absolute;
     left: 8%; top: 50%; transform: translateY(-50%);
     z-index: 5;
-    animation: fade-left 1.2s ease 0.5s both;
   }
-  @keyframes fade-left {
-    from { opacity: 0; transform: translateY(-50%) translateX(-40px); }
-    to   { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+  /* NO FADE ON NAME */
+  .no-anim {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: translateY(-50%) translateX(0) !important;
   }
 
   .brand-name {
@@ -284,7 +290,7 @@
   <!-- HERO SECTION -->
   <section id="hero">
     <div class="particles" id="particles"></div>
-    <div class="hero-left">
+    <div class="hero-left no-anim">
       <div class="brand-name">XLAW<br>STORE</div>
       <div class="hero-divider"></div>
       <div class="brand-sub">Faizan Ali</div>
